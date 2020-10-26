@@ -12,11 +12,11 @@ def checkBlanagrams(word1, word2):
             if list1[i] == list2[j]:
                 print('match', i, list1[i], j, list2[j])
                 del list2[j]
-                print('in loop', len(list2), list2)
+                print('word2 length', len(list2), list2)
                 break
             else:
-                break
                 print('miss', i, list1[i], j, list2[j])
+                continue
 
     print('outside', len(list2), list2)
     if len(list2) == 1:
@@ -25,13 +25,13 @@ def checkBlanagrams(word1, word2):
     print("False")
     return False
 
-checkBlanagrams("tangram", "anagram") # true
-checkBlanagrams("tangram", "pangram") # true
-checkBlanagrams("silent", "listen") # false
-checkBlanagrams("x", "y") # true
-checkBlanagrams("z", "z") # false
-checkBlanagrams("aba", "bab") # true
-checkBlanagrams("abacaba", "abadaba") # true
-checkBlanagrams("abacabaabcabcabc", "abadabaabcabcabc") # true
-checkBlanagrams("abacabaabcabcabd", "abadabaabcabcabc") # false
-checkBlanagrams("abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu", "cabdefghijklmnopqrstuvwzyxabcdefghijklonmpqrstu") # false
+# checkBlanagrams("tangram", "anagram") # true
+# checkBlanagrams("tangram", "pangram") # true
+# checkBlanagrams("silent", "listen") # false
+# checkBlanagrams("x", "y") # true
+# checkBlanagrams("z", "z") # false
+# checkBlanagrams("aba", "bab") # true
+# checkBlanagrams("abacaba", "abadaba") # true
+# checkBlanagrams("abacabaabcabcabc", "abadabaabcabcabc") # true
+# checkBlanagrams("abacabaabcabcabd", "abadabaabcabcabc") # false
+# checkBlanagrams("abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu", "cabdefghijklmnopqrstuvwzyxabcdefghijklonmpqrstu") # false
