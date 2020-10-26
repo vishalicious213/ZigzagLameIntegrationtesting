@@ -1,6 +1,7 @@
 def checkBlanagrams(word1, word2):
 # big plan: check if all letters are the same except for one
     if len(word1) < 1 or len(word2) < 1:
+        print("False")
         return False
         
     list1 = list(word1)
@@ -19,5 +20,18 @@ def checkBlanagrams(word1, word2):
 
     print('outside', len(list2), list2)
     if len(list2) == 1:
+        print("True")
         return True
+    print("False")
     return False
+
+checkBlanagrams("tangram", "anagram") # true
+checkBlanagrams("tangram", "pangram") # true
+checkBlanagrams("silent", "listen") # false
+checkBlanagrams("x", "y") # true
+checkBlanagrams("z", "z") # false
+checkBlanagrams("aba", "bab") # true
+checkBlanagrams("abacaba", "abadaba") # true
+checkBlanagrams("abacabaabcabcabc", "abadabaabcabcabc") # true
+checkBlanagrams("abacabaabcabcabd", "abadabaabcabcabc") # false
+checkBlanagrams("abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu", "cabdefghijklmnopqrstuvwzyxabcdefghijklonmpqrstu") # false
